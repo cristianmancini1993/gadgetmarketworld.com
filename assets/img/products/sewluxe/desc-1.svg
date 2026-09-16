@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
+  <rect width="800" height="600" fill="#fdf2f8"/>
+  <rect x="120" y="100" width="560" height="360" rx="20" fill="#fff" stroke="#fbcfe8"/>
+  <rect x="180" y="160" width="240" height="160" rx="12" fill="#1e293b"/>
+  <rect x="200" y="180" width="100" height="60" rx="6" fill="#f472b6"/>
+  <text x="500" y="220" font-family="Poppins,sans-serif" font-size="28" font-weight="700" fill="#be185d">FabricSense"</text>
+  <text x="500" y="260" font-family="Poppins,sans-serif" font-size="16" fill="#64748b">Adattamento automatico</text>
+  <text x="400" y="520" text-anchor="middle" font-family="Poppins,sans-serif" font-size="20" fill="#5b6472">desc-1  FabricSense</text>
+</svg>

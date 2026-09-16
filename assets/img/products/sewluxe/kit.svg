@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
+  <rect width="800" height="600" fill="#fdf2f8"/>
+  <rect x="100" y="80" width="600" height="400" rx="20" fill="#fff" stroke="#fbcfe8" stroke-width="3"/>
+  <rect x="140" y="120" width="200" height="140" rx="10" fill="#1e293b"/>
+  <rect x="360" y="140" width="80" height="80" rx="8" fill="#ec4899"/>
+  <rect x="460" y="140" width="80" height="80" rx="8" fill="#f472b6"/>
+  <rect x="560" y="140" width="80" height="80" rx="8" fill="#fbcfe8"/>
+  <text x="400" y="340" text-anchor="middle" font-family="Poppins,sans-serif" font-size="28" font-weight="700" fill="#be185d">Kit completo SewLuxe"</text>
+  <text x="400" y="520" text-anchor="middle" font-family="Poppins,sans-serif" font-size="20" fill="#5b6472">Replace with kit.png</text>
+</svg>
