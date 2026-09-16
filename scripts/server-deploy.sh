@@ -2,7 +2,7 @@
 # Run on the server after git pull (GitHub Actions SSH or manual).
 set -euo pipefail
 
-REPO="${DEPLOY_REPO_PATH:-/root/gadgetmarketworld.com}"
+REPO="${DEPLOY_REPO_PATH:-/var/www/gadgetmarketworld.com}"
 DOCROOT="${DEPLOY_DOCROOT_PATH:-}"
 
 cd "${REPO}"
