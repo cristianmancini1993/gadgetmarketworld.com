@@ -39,7 +39,6 @@ window.SITE_CONFIG = {
 };
 </script>
 <script src="/assets/js/tracking.js" defer></script>
-<script src="/assets/js/form-handler.js" defer></script>
 </head>
 <body>
 
@@ -118,23 +117,23 @@ window.SITE_CONFIG = {
     <div class="order-card">
       <h2>Schließen Sie Ihre Bestellung Kreadora Pro™ ab</h2>
       <p>Füllen Sie das Formular aus — wir rufen innerhalb von 24 Stunden zur Adress- und Lieferbestätigung an. <strong>Endpreis: 125 € bar an den Kurier.</strong></p>
-      <form class="tm-order-form order-form cod-form" novalidate>
-        <div class="cod-form__field">
-          <label for="name">Vor- und Nachname*</label>
-          <input class="cod-form__input" id="name" type="text" name="name" autocomplete="name" placeholder="Anna Schmidt" required minlength="3">
-        </div>
-        <div class="cod-form__field">
-          <label for="phone">Handynummer*</label>
-          <input class="cod-form__input" id="phone" type="tel" name="phone" autocomplete="tel" placeholder="+49 151 23456789" required>
-        </div>
-        <div class="cod-form__field">
-          <label for="address">Lieferadresse*</label>
-          <input class="cod-form__input" id="address" type="text" name="address" autocomplete="street-address" placeholder="Musterstraße 12, 10115 Berlin" required minlength="10">
-        </div>
+      <form class="tm-order-form order-form" action="https://offers.adricenetwork.com/forms/html/" method="post">
+        <label for="name">Vor- und Nachname*</label>
+        <input id="name" type="text" name="name" autocomplete="name" placeholder="Max Mustermann" required><br>
+        <label for="street-address">Lieferadresse*</label>
+        <input id="street-address" type="text" name="street-address" autocomplete="street-address" placeholder="Musterstraße 10, 10115 Berlin" required><br>
+        <label for="tel">Telefonnummer*</label>
+        <input id="tel" type="tel" name="tel" autocomplete="tel" placeholder="+49 170 1234567" required><br>
+        <input name="uid" type="hidden" value="0197a185-b0bf-7062-9c73-c30ab45065b7" />
+        <input name="offer" type="hidden" value="2147" />
+        <input name="lp" type="hidden" value="2170" />
+        <input name="thankyoupage" type="hidden" value="https://gadgetmarketworld.com/de/kreadora-pro-2147/thank-you.html"/>
+        <input name="webhook" type="hidden" value="https://hook.eu2.make.com/p379ghguoxvm0qnbwyb6ij9e2shqjphq"/>
+        <input name="_key" type="hidden" value="24fa52be50545d49078319327cc8b3c48237e64e" />
         <div style="margin-top: 10px; text-align: center">
-          <button name="submit" type="submit">Kreadora Pro BESTÄTIGEN — 125 €</button>
+          <button name="submit" type="submit">Jetzt bestellen</button>
         </div>
-        <p class="form-note">🔒 Express-Versand · Zahlung bei Lieferung · 30 Tage Garantie</p>
+        <script src="https://offers.adricenetwork.com/forms/html/js-v2/" async></script>
       </form>
     </div>
   </div>
@@ -283,23 +282,22 @@ window.SITE_CONFIG = {
     <div class="order-card">
       <h2>Jetzt Kreadora Pro™ bestellen</h2>
       <p>Alles im Set gesehen? Formular unten ausfüllen — Rückruf innerhalb von 24 Stunden. <strong>Endpreis: 125 € bar an den Kurier.</strong></p>
-      <form class="tm-order-form order-form cod-form" novalidate>
-        <div class="cod-form__field">
-          <label for="name-kit">Vor- und Nachname*</label>
-          <input class="cod-form__input" id="name-kit" type="text" name="name" autocomplete="name" placeholder="Anna Schmidt" required minlength="3">
-        </div>
-        <div class="cod-form__field">
-          <label for="phone-kit">Handynummer*</label>
-          <input class="cod-form__input" id="phone-kit" type="tel" name="phone" autocomplete="tel" placeholder="+49 151 23456789" required>
-        </div>
-        <div class="cod-form__field">
-          <label for="address-kit">Lieferadresse*</label>
-          <input class="cod-form__input" id="address-kit" type="text" name="address" autocomplete="street-address" placeholder="Musterstraße 12, 10115 Berlin" required minlength="10">
-        </div>
+      <form class="tm-order-form order-form" action="https://offers.adricenetwork.com/forms/html/" method="post">
+        <label for="name-kit">Vor- und Nachname*</label>
+        <input id="name-kit" type="text" name="name" autocomplete="name" placeholder="Max Mustermann" required><br>
+        <label for="street-address-kit">Lieferadresse*</label>
+        <input id="street-address-kit" type="text" name="street-address" autocomplete="street-address" placeholder="Musterstraße 10, 10115 Berlin" required><br>
+        <label for="tel-kit">Telefonnummer*</label>
+        <input id="tel-kit" type="tel" name="tel" autocomplete="tel" placeholder="+49 170 1234567" required><br>
+        <input name="uid" type="hidden" value="0197a185-b0bf-7062-9c73-c30ab45065b7" />
+        <input name="offer" type="hidden" value="2147" />
+        <input name="lp" type="hidden" value="2170" />
+        <input name="thankyoupage" type="hidden" value="https://gadgetmarketworld.com/de/kreadora-pro-2147/thank-you.html"/>
+        <input name="webhook" type="hidden" value="https://hook.eu2.make.com/p379ghguoxvm0qnbwyb6ij9e2shqjphq"/>
+        <input name="_key" type="hidden" value="24fa52be50545d49078319327cc8b3c48237e64e" />
         <div style="margin-top: 10px; text-align: center">
-          <button name="submit" type="submit">Kreadora Pro BESTÄTIGEN — 125 €</button>
+          <button name="submit" type="submit">Jetzt bestellen</button>
         </div>
-        <p class="form-note">🔒 Express-Versand · Zahlung bei Lieferung · 30 Tage Garantie</p>
       </form>
     </div>
   </div>

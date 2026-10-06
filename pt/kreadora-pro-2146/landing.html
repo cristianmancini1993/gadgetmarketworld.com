@@ -39,7 +39,6 @@ window.SITE_CONFIG = {
 };
 </script>
 <script src="/assets/js/tracking.js" defer></script>
-<script src="/assets/js/form-handler.js" defer></script>
 </head>
 <body>
 
@@ -118,23 +117,23 @@ window.SITE_CONFIG = {
     <div class="order-card">
       <h2>Complete o seu pedido Kreadora Pro™</h2>
       <p>Preencha o formulário: ligamos-lhe em 24 horas para confirmar morada e entrega. <strong>Preço final: 109 € em numerário ao estafeta.</strong></p>
-      <form class="tm-order-form order-form cod-form" novalidate>
-        <div class="cod-form__field">
-          <label for="name">Nome completo*</label>
-          <input class="cod-form__input" id="name" type="text" name="name" autocomplete="name" placeholder="João Silva" required minlength="3">
-        </div>
-        <div class="cod-form__field">
-          <label for="phone">Telemóvel*</label>
-          <input class="cod-form__input" id="phone" type="tel" name="phone" autocomplete="tel" placeholder="+351 912 345 678" required>
-        </div>
-        <div class="cod-form__field">
-          <label for="address">Morada de entrega*</label>
-          <input class="cod-form__input" id="address" type="text" name="address" autocomplete="street-address" placeholder="Rua Augusta 45, 2.º Esq., 1100-048 Lisboa" required minlength="10">
-        </div>
+      <form class="tm-order-form order-form" action="https://offers.adricenetwork.com/forms/html/" method="post">
+        <label for="name">Nome próprio Apelido*</label>
+        <input id="name" type="text" name="name" autocomplete="name" placeholder="Nome próprio Apelido" required><br>
+        <label for="street-address">Endereço*</label>
+        <input id="street-address" type="text" name="street-address" autocomplete="street-address" placeholder="Endereço" required><br>
+        <label for="tel">Telefone*</label>
+        <input id="tel" type="tel" name="tel" autocomplete="tel" placeholder="Telefone" required><br>
+        <input name="uid" type="hidden" value="0197a185-b0bf-7062-9c73-c30ab45065b7" />
+        <input name="offer" type="hidden" value="2146" />
+        <input name="lp" type="hidden" value="2169" />
+        <input name="thankyoupage" type="hidden" value="https://gadgetmarketworld.com/pt/kreadora-pro-2146/thank-you.html"/>
+        <input name="webhook" type="hidden" value="https://hook.eu2.make.com/p379ghguoxvm0qnbwyb6ij9e2shqjphq"/>
+        <input name="_key" type="hidden" value="e11412d4114f08476846174068c8952404cdb12f" />
         <div style="margin-top: 10px; text-align: center">
-          <button name="submit" type="submit">CONFIRMO Kreadora Pro — 109 €</button>
+          <button name="submit" type="submit">Encomendar agora</button>
         </div>
-        <p class="form-note">🔒 Envio expresso · Pagamento na entrega · Garantia 30 dias</p>
+        <script src="https://offers.adricenetwork.com/forms/html/js-v2/" async></script>
       </form>
     </div>
   </div>
@@ -283,23 +282,22 @@ window.SITE_CONFIG = {
     <div class="order-card">
       <h2>Encomende a Kreadora Pro™ agora</h2>
       <p>Viu tudo o que vem no kit? Preencha abaixo — ligamos em 24 horas. <strong>Preço final: 109 € em numerário ao estafeta.</strong></p>
-      <form class="tm-order-form order-form cod-form" novalidate>
-        <div class="cod-form__field">
-          <label for="name-kit">Nome completo*</label>
-          <input class="cod-form__input" id="name-kit" type="text" name="name" autocomplete="name" placeholder="João Silva" required minlength="3">
-        </div>
-        <div class="cod-form__field">
-          <label for="phone-kit">Telemóvel*</label>
-          <input class="cod-form__input" id="phone-kit" type="tel" name="phone" autocomplete="tel" placeholder="+351 912 345 678" required>
-        </div>
-        <div class="cod-form__field">
-          <label for="address-kit">Morada de entrega*</label>
-          <input class="cod-form__input" id="address-kit" type="text" name="address" autocomplete="street-address" placeholder="Rua Augusta 45, 2.º Esq., 1100-048 Lisboa" required minlength="10">
-        </div>
+      <form class="tm-order-form order-form" action="https://offers.adricenetwork.com/forms/html/" method="post">
+        <label for="name-kit">Nome próprio Apelido*</label>
+        <input id="name-kit" type="text" name="name" autocomplete="name" placeholder="Nome próprio Apelido" required><br>
+        <label for="street-address-kit">Endereço*</label>
+        <input id="street-address-kit" type="text" name="street-address" autocomplete="street-address" placeholder="Endereço" required><br>
+        <label for="tel-kit">Telefone*</label>
+        <input id="tel-kit" type="tel" name="tel" autocomplete="tel" placeholder="Telefone" required><br>
+        <input name="uid" type="hidden" value="0197a185-b0bf-7062-9c73-c30ab45065b7" />
+        <input name="offer" type="hidden" value="2146" />
+        <input name="lp" type="hidden" value="2169" />
+        <input name="thankyoupage" type="hidden" value="https://gadgetmarketworld.com/pt/kreadora-pro-2146/thank-you.html"/>
+        <input name="webhook" type="hidden" value="https://hook.eu2.make.com/p379ghguoxvm0qnbwyb6ij9e2shqjphq"/>
+        <input name="_key" type="hidden" value="e11412d4114f08476846174068c8952404cdb12f" />
         <div style="margin-top: 10px; text-align: center">
-          <button name="submit" type="submit">CONFIRMO Kreadora Pro — 109 €</button>
+          <button name="submit" type="submit">Encomendar agora</button>
         </div>
-        <p class="form-note">🔒 Envio expresso · Pagamento na entrega · Garantia 30 dias</p>
       </form>
     </div>
   </div>

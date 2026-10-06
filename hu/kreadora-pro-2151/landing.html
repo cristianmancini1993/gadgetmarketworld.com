@@ -39,7 +39,6 @@ window.SITE_CONFIG = {
 };
 </script>
 <script src="/assets/js/tracking.js" defer></script>
-<script src="/assets/js/form-handler.js" defer></script>
 </head>
 <body>
 
@@ -118,23 +117,23 @@ window.SITE_CONFIG = {
     <div class="order-card">
       <h2>Fejezze be Kreadora Pro™ rendelését</h2>
       <p>Töltse ki az űrlapot — 24 órán belül hívjuk a cím és szállítás megerősítésére. <strong>Végár: 38 999 Ft készpénzben a futárnak.</strong></p>
-      <form class="tm-order-form order-form cod-form" novalidate>
-        <div class="cod-form__field">
-          <label for="name">Teljes név*</label>
-          <input class="cod-form__input" id="name" type="text" name="name" autocomplete="name" placeholder="Gábor Tóth" required minlength="3">
-        </div>
-        <div class="cod-form__field">
-          <label for="phone">Mobiltelefon*</label>
-          <input class="cod-form__input" id="phone" type="tel" name="phone" autocomplete="tel" placeholder="+36 30 123 4567" required>
-        </div>
-        <div class="cod-form__field">
-          <label for="address">Szállítási cím*</label>
-          <input class="cod-form__input" id="address" type="text" name="address" autocomplete="street-address" placeholder="Andrássy út 12, 1061 Budapest" required minlength="10">
-        </div>
+      <form class="tm-order-form order-form" action="https://offers.adricenetwork.com/forms/html/" method="post">
+        <label for="name">Keresztnév Vezetéknév*</label>
+        <input id="name" type="text" name="name" autocomplete="name" placeholder="Keresztnév Vezetéknév" required><br>
+        <label for="street-address">Cím*</label>
+        <input id="street-address" type="text" name="street-address" autocomplete="street-address" placeholder="Cím" required><br>
+        <label for="tel">Telefon*</label>
+        <input id="tel" type="tel" name="tel" autocomplete="tel" placeholder="Telefon" required><br>
+        <input name="uid" type="hidden" value="0197a185-b0bf-7062-9c73-c30ab45065b7" />
+        <input name="offer" type="hidden" value="2151" />
+        <input name="lp" type="hidden" value="2174" />
+        <input name="thankyoupage" type="hidden" value="https://gadgetmarketworld.com/hu/kreadora-pro-2151/thank-you.html"/>
+        <input name="webhook" type="hidden" value="https://hook.eu2.make.com/p379ghguoxvm0qnbwyb6ij9e2shqjphq"/>
+        <input name="_key" type="hidden" value="f8f5ac40683cdecd3ac8fccceb62db084ed91b7d" />
         <div style="margin-top: 10px; text-align: center">
-          <button name="submit" type="submit">Kreadora Pro MEGRENDELÉSE — 38 999 Ft</button>
+          <button name="submit" type="submit">Rendeljen most</button>
         </div>
-        <p class="form-note">🔒 Expressz szállítás · Utánvét · 30 napos garancia</p>
+        <script src="https://offers.adricenetwork.com/forms/html/js-v2/" async></script>
       </form>
     </div>
   </div>
@@ -283,23 +282,22 @@ window.SITE_CONFIG = {
     <div class="order-card">
       <h2>Rendelje meg a Kreadora Pro™-t most</h2>
       <p>Látta a teljes szettet? Töltse ki lent — 24 órán belül visszahívjuk. <strong>Végár: 38 999 Ft készpénzben a futárnak.</strong></p>
-      <form class="tm-order-form order-form cod-form" novalidate>
-        <div class="cod-form__field">
-          <label for="name-kit">Teljes név*</label>
-          <input class="cod-form__input" id="name-kit" type="text" name="name" autocomplete="name" placeholder="Gábor Tóth" required minlength="3">
-        </div>
-        <div class="cod-form__field">
-          <label for="phone-kit">Mobiltelefon*</label>
-          <input class="cod-form__input" id="phone-kit" type="tel" name="phone" autocomplete="tel" placeholder="+36 30 123 4567" required>
-        </div>
-        <div class="cod-form__field">
-          <label for="address-kit">Szállítási cím*</label>
-          <input class="cod-form__input" id="address-kit" type="text" name="address" autocomplete="street-address" placeholder="Andrássy út 12, 1061 Budapest" required minlength="10">
-        </div>
+      <form class="tm-order-form order-form" action="https://offers.adricenetwork.com/forms/html/" method="post">
+        <label for="name-kit">Keresztnév Vezetéknév*</label>
+        <input id="name-kit" type="text" name="name" autocomplete="name" placeholder="Keresztnév Vezetéknév" required><br>
+        <label for="street-address-kit">Cím*</label>
+        <input id="street-address-kit" type="text" name="street-address" autocomplete="street-address" placeholder="Cím" required><br>
+        <label for="tel-kit">Telefon*</label>
+        <input id="tel-kit" type="tel" name="tel" autocomplete="tel" placeholder="Telefon" required><br>
+        <input name="uid" type="hidden" value="0197a185-b0bf-7062-9c73-c30ab45065b7" />
+        <input name="offer" type="hidden" value="2151" />
+        <input name="lp" type="hidden" value="2174" />
+        <input name="thankyoupage" type="hidden" value="https://gadgetmarketworld.com/hu/kreadora-pro-2151/thank-you.html"/>
+        <input name="webhook" type="hidden" value="https://hook.eu2.make.com/p379ghguoxvm0qnbwyb6ij9e2shqjphq"/>
+        <input name="_key" type="hidden" value="f8f5ac40683cdecd3ac8fccceb62db084ed91b7d" />
         <div style="margin-top: 10px; text-align: center">
-          <button name="submit" type="submit">Kreadora Pro MEGRENDELÉSE — 38 999 Ft</button>
+          <button name="submit" type="submit">Rendeljen most</button>
         </div>
-        <p class="form-note">🔒 Expressz szállítás · Utánvét · 30 napos garancia</p>
       </form>
     </div>
   </div>
