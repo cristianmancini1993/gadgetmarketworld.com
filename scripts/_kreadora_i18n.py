@@ -2,12 +2,60 @@
 """Copy and pricing for Kreadora Pro multi-geo landings."""
 
 OFFERS = [
-    {"geo": "pt", "offer": 2146, "price_num": 109.0, "currency": "EUR", "price_now": "109 €", "price_was": "363 €"},
-    {"geo": "de", "offer": 2147, "price_num": 125.0, "currency": "EUR", "price_now": "125 €", "price_was": "417 €"},
-    {"geo": "lt", "offer": 2148, "price_num": 99.0, "currency": "EUR", "price_now": "99 €", "price_was": "330 €"},
-    {"geo": "pl", "offer": 2150, "price_num": 459.0, "currency": "PLN", "price_now": "459 zł", "price_was": "1 530 zł"},
-    {"geo": "hu", "offer": 2151, "price_num": 38999.0, "currency": "HUF", "price_now": "38 999 Ft", "price_was": "130 000 Ft"},
-    {"geo": "es", "offer": 3490, "price_num": 89.0, "currency": "EUR", "price_now": "89 €", "price_was": "297 €"},
+    {
+        "geo": "pt",
+        "offer": 2146,
+        "price_num": 109.0,
+        "currency": "EUR",
+        "price_now": "109 €",
+        "price_was": "363 €",
+        "meta_cpa_usd": 19.0,
+    },
+    {
+        "geo": "de",
+        "offer": 2147,
+        "price_num": 125.0,
+        "currency": "EUR",
+        "price_now": "125 €",
+        "price_was": "417 €",
+        "meta_cpa_usd": 18.0,
+    },
+    {
+        "geo": "lt",
+        "offer": 2148,
+        "price_num": 99.0,
+        "currency": "EUR",
+        "price_now": "99 €",
+        "price_was": "330 €",
+        "meta_cpa_usd": 18.0,
+    },
+    {
+        "geo": "pl",
+        "offer": 2150,
+        "price_num": 459.0,
+        "currency": "PLN",
+        "price_now": "459 zł",
+        "price_was": "1 530 zł",
+        "meta_cpa_usd": 19.0,
+    },
+    {
+        "geo": "hu",
+        "offer": 2151,
+        "price_num": 38999.0,
+        "currency": "HUF",
+        "price_now": "38 999 Ft",
+        "price_was": "130 000 Ft",
+        "meta_cpa_usd": 18.0,
+    },
+    {
+        "geo": "es",
+        "offer": 3490,
+        "price_num": 89.0,
+        "currency": "EUR",
+        "price_now": "89 €",
+        "price_was": "297 €",
+        "meta_cpa_usd": 17.0,
+    },
 ]
 
 IMG = "/assets/img/products/chefmix-pro"

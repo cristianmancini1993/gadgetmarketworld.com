@@ -228,6 +228,7 @@ def offer_cfg(row: dict) -> dict:
         "ph_name": t["ph_name"],
         "ph_phone": t["ph_phone"],
         "ph_address": t["ph_address"],
+        "meta_cpa_usd": row["meta_cpa_usd"],
     }
 
 
@@ -406,12 +407,20 @@ def render_thank_you(cfg: dict, t: dict) -> str:
     html = html.replace("GEO: 'it'", f"GEO: '{geo}'")
     html = re.sub(r"PRODUCT_SLUG:\s*'chefmix-pro'", f"PRODUCT_SLUG: '{slug}'", html)
     html = html.replace("CURRENCY: 'EUR'", f"CURRENCY: '{currency}'")
+    meta_cpa = cfg["meta_cpa_usd"]
     html = re.sub(r"PRICE: 99\.00", f"PRICE: {price}", html)
+    html = html.replace(
+        "PRICE: 99.00,\n  META_PIXEL_ID:",
+        f"PRICE: {price},\n  META_PURCHASE_VALUE: {meta_cpa},\n  META_PURCHASE_CURRENCY: 'USD',\n  META_PIXEL_ID:",
+    )
     html = html.replace(
         "COOKIE_TEXT: 'Usiamo cookie tecnici e di terze parti per migliorare la tua esperienza e per analisi.',\n  COOKIE_ACCEPT: 'Accetta',\n  COOKIE_LEARN: 'Scopri di più'",
         f"COOKIE_TEXT: '{esc_js(t['cookie_text'])}',\n  COOKIE_ACCEPT: '{esc_js(t['cookie_accept'])}',\n  COOKIE_LEARN: '{esc_js(t['cookie_learn'])}'",
     )
-    html = html.replace("trackPurchase(99.00, 'EUR')", f"trackPurchase({price}, '{currency}')")
+    html = html.replace(
+        "<script>\n// Trigger Purchase / conversion event after page load\nwindow.addEventListener('load', function () {\n  if (window.trackPurchase) window.trackPurchase(99.00, 'EUR');\n});\n</script>",
+        '<script src="/assets/js/meta-purchase-thankyou.js" defer></script>',
+    )
 
     html = html.replace("Il tuo ordine è stato registrato con successo!", t["ty_h1"])
     html = html.replace(

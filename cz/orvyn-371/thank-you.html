@@ -200,6 +200,8 @@ window.SITE_CONFIG = {
   PRODUCT_SLUG: 'orvyn-371',
   CURRENCY: 'CZK',
   PRICE: 1489.0,
+  META_PURCHASE_VALUE: 18.0,
+  META_PURCHASE_CURRENCY: 'USD',
   META_PIXEL_ID: '',
   GOOGLE_TAG_ID: '',
   GOOGLE_ADS_CONVERSION_ID: '',
@@ -211,6 +213,7 @@ window.SITE_CONFIG = {
 </script>
 <script src="/assets/js/tracking.js" defer></script>
 <script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/meta-purchase-thankyou.js" defer></script>
 <script>
 window.addEventListener('load', function () {
   if (window.trackPurchase) window.trackPurchase(1489.0, 'CZK');

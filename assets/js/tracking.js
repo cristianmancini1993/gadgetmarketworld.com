@@ -274,6 +274,35 @@
     window.fbq('track', 'PageView');
   }
 
+  window.fireMetaThankYouPurchase = function () {
+    if (window.__metaThankYouPurchaseFired) return true;
+    const cfg = window.SITE_CONFIG || {};
+    const purchaseValue =
+      cfg.META_PURCHASE_VALUE != null && cfg.META_PURCHASE_VALUE !== ''
+        ? Number(cfg.META_PURCHASE_VALUE)
+        : Number(cfg.PRICE || 0);
+    if (!purchaseValue || typeof window.fbq !== 'function') return false;
+    const purchaseCurrency = cfg.META_PURCHASE_CURRENCY || 'USD';
+    window.fbq('track', 'Purchase', {
+      value: purchaseValue,
+      currency: purchaseCurrency,
+    });
+    window.__metaThankYouPurchaseFired = true;
+    return true;
+  };
+
+  if (/\/thank-you\.html$/i.test(window.location.pathname)) {
+    if (!window.fireMetaThankYouPurchase()) {
+      let attempts = 0;
+      const timer = window.setInterval(function () {
+        attempts += 1;
+        if (window.fireMetaThankYouPurchase() || attempts >= 60) {
+          window.clearInterval(timer);
+        }
+      }, 100);
+    }
+  }
+
   // ---- GOOGLE TAG bootstrap ----
   if (C.GOOGLE_TAG_ID) {
     const s = document.createElement('script');
@@ -335,19 +364,27 @@ window.trackLead = function () {
 };
 
 window.trackPurchase = function (value, currency) {
-  if (window.fireLifepickshopThankYouConversion) {
-    return window.fireLifepickshopThankYouConversion({ value: value, currency: currency });
-  }
-
   const C = window.SITE_CONFIG || {};
   const T = window.getLifepickshopTrackingContext ? window.getLifepickshopTrackingContext() : {};
-  if (window.fbq) {
+  const metaValue =
+    C.META_PURCHASE_VALUE != null && C.META_PURCHASE_VALUE !== ''
+      ? Number(C.META_PURCHASE_VALUE)
+      : Number(value != null ? value : C.PRICE || 0);
+  const metaCurrency = C.META_PURCHASE_CURRENCY || currency || C.CURRENCY || 'USD';
+
+  if (window.fireMetaThankYouPurchase) {
+    window.fireMetaThankYouPurchase();
+  } else if (window.fbq) {
     window.fbq('track', 'Purchase', {
-      value: value || C.PRICE || 0,
-      currency: currency || C.CURRENCY || 'USD',
+      value: metaValue,
+      currency: metaCurrency,
       campaign_id: T.campaign_id || '',
       subid: T.subid || '',
     });
+  }
+
+  if (window.fireLifepickshopThankYouConversion) {
+    return window.fireLifepickshopThankYouConversion({ value: metaValue, currency: metaCurrency });
   }
   if (window.gtag && C.GOOGLE_ADS_CONVERSION_ID && C.TY_CONVERSION_LABEL) {
     window.gtag('event', 'conversion', {

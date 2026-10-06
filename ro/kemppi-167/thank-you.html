@@ -206,6 +206,8 @@ window.SITE_CONFIG = {
   PRODUCT_SLUG: 'kemppi-167',
   CURRENCY: 'RON',
   PRICE: 549.0,
+  META_PURCHASE_VALUE: 17.0,
+  META_PURCHASE_CURRENCY: 'USD',
   META_PIXEL_ID: '',
   GOOGLE_TAG_ID: '',
   GOOGLE_ADS_CONVERSION_ID: '',
@@ -217,12 +219,7 @@ window.SITE_CONFIG = {
 </script>
 <script src="/assets/js/tracking.js" defer></script>
 <script src="/assets/js/main.js" defer></script>
-<script>
-// Trigger Purchase / conversion event after page load
-window.addEventListener('load', function () {
-  if (window.trackPurchase) window.trackPurchase(549.0, 'RON');
-});
-</script>
+<script src="/assets/js/meta-purchase-thankyou.js" defer></script>
 </head>
 <body>
 
