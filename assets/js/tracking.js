@@ -257,8 +257,9 @@
 
   captureClickIds();
 
-  // ---- META PIXEL bootstrap ----
-  if (C.META_PIXEL_ID) {
+  // ---- META PIXEL bootstrap (default site-wide ID; override via SITE_CONFIG.META_PIXEL_ID) ----
+  var metaPixelId = C.META_PIXEL_ID || '3995973087204921';
+  if (metaPixelId && !window.fbq) {
     !(function (f, b, e, v, n, t, s) {
       if (f.fbq) return;
       n = f.fbq = function () {
@@ -269,7 +270,7 @@
       t = b.createElement(e); t.async = !0; t.src = v;
       s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
     })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-    window.fbq('init', C.META_PIXEL_ID);
+    window.fbq('init', metaPixelId);
     window.fbq('track', 'PageView');
   }
 
