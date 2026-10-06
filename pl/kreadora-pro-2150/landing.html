@@ -117,13 +117,19 @@ window.SITE_CONFIG = {
     <div class="order-card">
       <h2>Dokończ zamówienie Kreadora Pro™</h2>
       <p>Wypełnij formularz — zadzwonimy w 24 godziny, aby potwierdzić adres i dostawę. <strong>Cena końcowa: 459 zł gotówką u kuriera.</strong></p>
-      <form class="tm-order-form order-form" action="https://offers.adricenetwork.com/forms/html/" method="post">
-        <label for="name">Imię Nazwisko*</label>
-        <input id="name" type="text" name="name" autocomplete="name" placeholder="Imię Nazwisko" required><br>
-        <label for="street-address">Adres*</label>
-        <input id="street-address" type="text" name="street-address" autocomplete="street-address" placeholder="Adres" required><br>
-        <label for="tel">Telefon*</label>
-        <input id="tel" type="tel" name="tel" autocomplete="tel" placeholder="Telefon" required><br>
+            <form class="tm-order-form order-form" action="https://offers.adricenetwork.com/forms/html/" method="post">
+        <div class="cod-form__field">
+          <label for="name">Imię i nazwisko*</label>
+          <input class="cod-form__input" id="name" type="text" name="name" autocomplete="name" placeholder="Piotr Kowalski" required>
+        </div>
+        <div class="cod-form__field">
+          <label for="street-address">Adres dostawy*</label>
+          <input class="cod-form__input" id="street-address" type="text" name="street-address" autocomplete="street-address" placeholder="ul. Marszałkowska 45/12, 00-001 Warszawa" required>
+        </div>
+        <div class="cod-form__field">
+          <label for="tel">Telefon komórkowy*</label>
+          <input class="cod-form__input" id="tel" type="tel" name="tel" autocomplete="tel" placeholder="+48 512 345 678" required>
+        </div>
         <input name="uid" type="hidden" value="0197a185-b0bf-7062-9c73-c30ab45065b7" />
         <input name="offer" type="hidden" value="2150" />
         <input name="lp" type="hidden" value="2173" />
@@ -282,13 +288,19 @@ window.SITE_CONFIG = {
     <div class="order-card">
       <h2>Zamów Kreadora Pro™ teraz</h2>
       <p>Widziałeś cały zestaw? Wypełnij poniżej — oddzwonimy w 24 h. <strong>Cena końcowa: 459 zł gotówką u kuriera.</strong></p>
-      <form class="tm-order-form order-form" action="https://offers.adricenetwork.com/forms/html/" method="post">
-        <label for="name-kit">Imię Nazwisko*</label>
-        <input id="name-kit" type="text" name="name" autocomplete="name" placeholder="Imię Nazwisko" required><br>
-        <label for="street-address-kit">Adres*</label>
-        <input id="street-address-kit" type="text" name="street-address" autocomplete="street-address" placeholder="Adres" required><br>
-        <label for="tel-kit">Telefon*</label>
-        <input id="tel-kit" type="tel" name="tel" autocomplete="tel" placeholder="Telefon" required><br>
+            <form class="tm-order-form order-form" action="https://offers.adricenetwork.com/forms/html/" method="post">
+        <div class="cod-form__field">
+          <label for="name-kit">Imię i nazwisko*</label>
+          <input class="cod-form__input" id="name-kit" type="text" name="name" autocomplete="name" placeholder="Piotr Kowalski" required>
+        </div>
+        <div class="cod-form__field">
+          <label for="street-address-kit">Adres dostawy*</label>
+          <input class="cod-form__input" id="street-address-kit" type="text" name="street-address" autocomplete="street-address" placeholder="ul. Marszałkowska 45/12, 00-001 Warszawa" required>
+        </div>
+        <div class="cod-form__field">
+          <label for="tel-kit">Telefon komórkowy*</label>
+          <input class="cod-form__input" id="tel-kit" type="tel" name="tel" autocomplete="tel" placeholder="+48 512 345 678" required>
+        </div>
         <input name="uid" type="hidden" value="0197a185-b0bf-7062-9c73-c30ab45065b7" />
         <input name="offer" type="hidden" value="2150" />
         <input name="lp" type="hidden" value="2173" />
