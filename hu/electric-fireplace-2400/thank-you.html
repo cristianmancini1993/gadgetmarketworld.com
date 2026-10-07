@@ -218,7 +218,7 @@ window.SITE_CONFIG = {
   GOOGLE_TAG_ID: '',
   GOOGLE_ADS_CONVERSION_ID: '',
   TY_CONVERSION_LABEL: '',
-  COOKIE_TEXT: 'Používáme technické soubory cookie a soubory cookie třetích stran.',
+  COOKIE_TEXT: 'Technikai és harmadik féltől származó sütiket használunk a jobb élményért és elemzéshez.',
   COOKIE_ACCEPT: 'Elfogadom',
   COOKIE_LEARN: 'Tudjon meg többet'
 };
@@ -336,6 +336,28 @@ window.SITE_CONFIG = {
       'utm_content': p.get('utm_content') || stored('utm_content') || ''
     });
   })();
+</script>
+
+<script>
+(function () {
+  function fireMetaPurchase() {
+    if (window.__metaThankYouPurchaseFired) return;
+    var C = window.SITE_CONFIG || {};
+    var value =
+      C.META_PURCHASE_VALUE != null && C.META_PURCHASE_VALUE !== ''
+        ? Number(C.META_PURCHASE_VALUE)
+        : 17;
+    var currency = C.META_PURCHASE_CURRENCY || 'USD';
+    if (typeof fbq !== 'function' || !value) return;
+    fbq('track', 'Purchase', { value: value, currency: currency });
+    window.__metaThankYouPurchaseFired = true;
+  }
+  if (document.readyState === 'complete') {
+    fireMetaPurchase();
+  } else {
+    window.addEventListener('load', fireMetaPurchase);
+  }
+})();
 </script>
 
 </body>
