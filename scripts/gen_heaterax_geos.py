@@ -407,6 +407,12 @@ def render_thank_you(offer: dict, c: dict) -> str:
     return f"""<!DOCTYPE html>
 <html lang="{lang}">
 <head>
+<!-- Meta Pixel Code -->
+<script src="/assets/js/meta-pixel.js"></script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3995973087204921&amp;ev=PageView&amp;noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18429742678"></script>
 <script>
@@ -454,6 +460,7 @@ window.SITE_CONFIG = {{
   PRODUCT_SLUG: '{slug}',
   CURRENCY: '{offer['currency']}',
   PRICE: {offer['price']},
+  META_PIXEL_ID: '3995973087204921',
   META_PURCHASE_VALUE: {meta_cpa},
   META_PURCHASE_CURRENCY: 'USD',
 }};
