@@ -291,6 +291,13 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* Form card */
+.hx-form-card .form-intro {
+  text-align: center;
+  font-size: 14px;
+  color: var(--hx-muted);
+  margin: -8px 0 16px;
+}
+
 .hx-form-card {
   margin-top: 16px;
   background: #fff;
@@ -771,6 +778,14 @@ a { color: inherit; text-decoration: none; }
   background: #fff;
 }
 .hx-kit-box .kit-inner { padding: 20px 18px 24px; }
+.hx-kit-order { margin-top: 4px; }
+.hx-kit-order .hx-price-card--kit {
+  border: 1px solid var(--hx-border);
+  border-radius: 14px;
+  margin-top: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+}
+.hx-kit-order .hx-form-card { margin-top: 16px; }
 .hx-kit-box .price-now {
   font-size: 36px;
   font-weight: 800;

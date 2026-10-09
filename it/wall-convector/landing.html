@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="/assets/img/products/wall-convector/hero.jpg?v=3" as="image" type="image/jpeg">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/heaterax-landing.css?v=2">
+<link rel="stylesheet" href="/assets/css/heaterax-landing.css?v=3">
 <script>
 window.SITE_CONFIG = {
   GEO: 'it',
@@ -107,10 +107,10 @@ window.SITE_CONFIG = {
     <p class="stock-warn"><strong>Affrettati:</strong> solo <strong>18 pezzi</strong> rimasti in magazzino!</p>
     <div class="live-row">
       <span class="dot"></span>
-      <span id="liveCount" data-live="<strong>{n} persone</strong> stanno ordinando Heaterax ora"><strong>4 persone</strong> stanno ordinando Heaterax ora</span>
+      <span class="js-live-count" data-live="<strong>{n} persone</strong> stanno ordinando Heaterax ora"><strong>4 persone</strong> stanno ordinando Heaterax ora</span>
     </div>
     <h3>Compila il modulo d’ordine</h3>
-    <p style="text-align:center;font-size:14px;color:var(--hx-muted);margin:-8px 0 16px;">Ti contattiamo per confermare spedizione e pagamento alla consegna.</p>
+    <p class="form-intro">Ti contattiamo per confermare spedizione e pagamento alla consegna.</p>
     <form class="tm-order-form order-form" action="https://offers.adricenetwork.com/forms/html/" method="post">
       <label for="name">Nome e Cognome*</label>
       <input id="name" type="text" name="name" autocomplete="name" placeholder="Mario Rossi" required>
@@ -218,7 +218,6 @@ window.SITE_CONFIG = {
   <div class="hx-kit-box">
     <img src="/assets/img/products/wall-convector/kit.jpg" alt="Kit completo Heaterax con accessori" width="1024" height="1024" loading="lazy" decoding="async">
     <div class="kit-inner">
-      <span class="price-now">89,99 €</span><span class="price-was">179,98 €</span><span class="price-pill">−50%</span>
       <ul>
         <li><strong>1× Heaterax™</strong> mini climatizzatore 2in1 da parete</li>
         <li>Filtro HEPA lavabile integrato</li>
@@ -226,7 +225,50 @@ window.SITE_CONFIG = {
         <li>Accessori per montaggio a parete</li>
         <li>Manuale in italiano · Spedizione 24/48h · Pagamento alla consegna · Reso 14 giorni</li>
       </ul>
-      <a href="#order-form" class="cta-btn">ORDINA ORA! →</a>
+      <div class="hx-kit-order" id="order-form-kit">
+        <div class="hx-price-card hx-price-card--kit">
+          <h2>Solo oggi Il climatizzatore <span class="brand">Heaterax™</span></h2>
+          <p class="sub">🚚 Consegna 24/48h + Garanzia soddisfatti o rimborsati 14 giorni</p>
+          <div class="price-row">
+            <div class="price-label">A soli</div>
+            <div class="now">89,99 €</div>
+            <div class="was">179,98 €</div>
+            <div class="discount-pill">− 50% di sconto</div>
+          </div>
+          <p class="scroll-hint">Compila il modulo qui sotto per ordinare</p>
+        </div>
+        <div class="hx-form-card">
+          <span class="stock-badge">SCORTE LIMITATE</span>
+          <p class="stock-warn"><strong>Affrettati:</strong> solo <strong>18 pezzi</strong> rimasti in magazzino!</p>
+          <div class="live-row">
+            <span class="dot"></span>
+            <span class="js-live-count" data-live="<strong>{n} persone</strong> stanno ordinando Heaterax ora"><strong>4 persone</strong> stanno ordinando Heaterax ora</span>
+          </div>
+          <h3>Compila il modulo d’ordine</h3>
+          <p class="form-intro">Ti contattiamo per confermare spedizione e pagamento alla consegna.</p>
+          <form class="tm-order-form order-form" action="https://offers.adricenetwork.com/forms/html/" method="post">
+            <label for="name-kit">Nome e Cognome*</label>
+            <input id="name-kit" type="text" name="name" autocomplete="name" placeholder="Mario Rossi" required>
+            <label for="tel-kit">Cellulare*</label>
+            <input id="tel-kit" type="tel" name="tel" autocomplete="tel" placeholder="+39 333 123 4567" required>
+            <label for="street-address-kit">Indirizzo di Spedizione*</label>
+            <input id="street-address-kit" type="text" name="street-address" autocomplete="street-address" placeholder="Via Roma 10, 00100 Roma" required>
+            <input name="uid" type="hidden" value="018e3961-c73a-7965-8fc1-b1d91c869a42">
+            <input name="offer" type="hidden" value="OFFER_ID">
+            <input name="lp" type="hidden" value="LP_ID">
+            <input name="thankyoupage" type="hidden" value="https://gadgetmarketworld.com/it/wall-convector/thank-you.html">
+            <input name="webhook" type="hidden" value="https://hook.eu2.make.com/i7pmea9fmpnepx94e5z6dxfwvl1bnnlh">
+            <input name="_key" type="hidden" value="FORM_KEY">
+            <button name="submit" type="submit">Conferma Ordine</button>
+            <p class="form-trust">🔒 Dati protetti · Nessun pagamento online · Spedizione 24/48h</p>
+          </form>
+          <ul class="hx-trust-list">
+            <li>🛡️ Pagamento alla consegna</li>
+            <li>🚚 Spedizione 24/48h</li>
+            <li>↩️ Reso gratuito</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -297,7 +339,7 @@ window.SITE_CONFIG = {
 </footer>
 
 <script src="https://offers.adricenetwork.com/forms/html/js-v2/" defer></script>
-<script src="/assets/js/heaterax-landing.js" defer></script>
+<script src="/assets/js/heaterax-landing.js?v=2" defer></script>
 <script>
   document.querySelectorAll('[data-year]').forEach(function (el) {
     el.textContent = String(new Date().getFullYear());

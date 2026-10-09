@@ -28,12 +28,14 @@
 })();
 
 (function () {
-  var el = document.getElementById('liveCount');
-  if (!el) return;
+  var nodes = document.querySelectorAll('.js-live-count');
+  if (!nodes.length) return;
   var count = 18;
-  var tpl = el.getAttribute('data-live') || '<strong>{n} persone</strong> stanno acquistando ora';
   function render() {
-    el.innerHTML = tpl.replace('{n}', String(count));
+    nodes.forEach(function (el) {
+      var tpl = el.getAttribute('data-live') || '<strong>{n} persone</strong> stanno acquistando ora';
+      el.innerHTML = tpl.replace('{n}', String(count));
+    });
   }
   render();
   setInterval(function () {
