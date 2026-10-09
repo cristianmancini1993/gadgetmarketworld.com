@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" preserveAspectRatio="xMidYMid meet">
+  <rect width="900" height="600" fill="#f8fafc"/>
+  <rect x="280" y="140" width="340" height="200" rx="16" fill="#1e293b"/>
+  <text x="450" y="250" text-anchor="middle" font-family="Poppins,sans-serif" font-size="22" fill="#94a3b8">Timer · Telecomando</text>
+  <text x="450" y="560" text-anchor="middle" font-family="Poppins,sans-serif" font-size="18" fill="#64748b">Controllo a distanza  desc-3</text>
+</svg>

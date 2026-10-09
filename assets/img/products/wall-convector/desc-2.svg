@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" preserveAspectRatio="xMidYMid meet">
+  <rect width="900" height="600" fill="#f8fafc"/>
+  <rect x="200" y="100" width="500" height="120" rx="12" fill="#fff" stroke="#f97316" stroke-width="3"/>
+  <text x="450" y="175" text-anchor="middle" font-family="Poppins,sans-serif" font-size="28" font-weight="700" fill="#14181f">PTC 1500W · 16°C  40°C</text>
+  <text x="450" y="560" text-anchor="middle" font-family="Poppins,sans-serif" font-size="18" fill="#64748b">Caldo rapido  desc-2</text>
+</svg>
