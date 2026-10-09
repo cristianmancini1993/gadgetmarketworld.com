@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """Copy and offer config for Heaterax / AirCurtain GEO landings."""
 
-UID = "018e3961-c73a-7965-8fc1-b1d91c869a42"
-WEBHOOK = "https://hook.eu2.make.com/i7pmea9fmpnepx94e5z6dxfwvl1bnnlh"
+UID = "0197a185-b0bf-7062-9c73-c30ab45065b7"
+WEBHOOK = "https://hook.eu2.make.com/p379ghguoxvm0qnbwyb6ij9e2shqjphq"
 FORM_ACTION = "https://offers.adricenetwork.com/forms/html/"
 
 OFFERS = [
@@ -11,8 +11,14 @@ OFFERS = [
         "slug": "wall-convector-1244",
         "product_type": "wall",
         "offer_id": "1244",
-        "lp_id": "1244",
-        "form_key": "",
+        "lp_id": "1263",
+        "form_key": "cb42e181496cbb44a7f6385f805d500d47a11a49",
+        "form_submit": "COMANDA ACUM",
+        "form_fields": [
+            {"name": "name", "label": "Nume și prenume*", "placeholder": "Nume și prenume", "type": "text", "autocomplete": "name", "required": True},
+            {"name": "tel", "label": "Telefon*", "placeholder": "Telefon", "type": "tel", "autocomplete": "tel", "required": True},
+            {"name": "street-address", "label": "Adresă completă*", "placeholder": "Adresă completă", "type": "text", "autocomplete": "street-address", "required": True},
+        ],
         "currency": "RON",
         "price": 397.0,
         "price_now": "397 lei",
@@ -26,8 +32,14 @@ OFFERS = [
         "slug": "air-curtain-1673",
         "product_type": "curtain",
         "offer_id": "1673",
-        "lp_id": "1673",
-        "form_key": "",
+        "lp_id": "1693",
+        "form_key": "be913d0ad0a2ab42a6a9f95008d8d58b7f048977",
+        "form_submit": "Encomendar agora",
+        "form_fields": [
+            {"name": "name", "label": "Nome próprio Apelido*", "placeholder": "Nome próprio Apelido", "type": "text", "autocomplete": "name", "required": True},
+            {"name": "street-address", "label": "Endereço*", "placeholder": "Endereço", "type": "text", "autocomplete": "street-address", "required": True},
+            {"name": "tel", "label": "Telefone de contacto*", "placeholder": "Telefone de contacto", "type": "tel", "autocomplete": "tel", "required": True},
+        ],
         "currency": "EUR",
         "price": 89.0,
         "price_now": "89 €",
@@ -41,8 +53,16 @@ OFFERS = [
         "slug": "wall-convector-1739",
         "product_type": "wall",
         "offer_id": "1739",
-        "lp_id": "1739",
-        "form_key": "",
+        "lp_id": "1759",
+        "form_key": "d5bccb454f2625a4d768f90e5fed2fd972c853e7",
+        "form_submit": "Zamów teraz",
+        "form_fields": [
+            {"name": "name", "label": "Imię i nazwisko*", "placeholder": "Imię i nazwisko", "type": "text", "autocomplete": "name", "required": True},
+            {"name": "tel", "label": "Telefon*", "placeholder": "Telefon", "type": "tel", "autocomplete": "tel", "required": True},
+            {"name": "street-address", "label": "Adres*", "placeholder": "Adres", "type": "text", "autocomplete": "street-address", "required": True},
+            {"name": "postal-code", "label": "Kod pocztowy*", "placeholder": "Kod pocztowy", "type": "text", "autocomplete": "postal-code", "required": True},
+            {"name": "address-level2", "label": "Miasto", "placeholder": "Miasto", "type": "text", "autocomplete": "address-level2", "required": False},
+        ],
         "currency": "PLN",
         "price": 299.0,
         "price_now": "299 zł",
@@ -56,8 +76,14 @@ OFFERS = [
         "slug": "air-curtain-2283",
         "product_type": "curtain",
         "offer_id": "2283",
-        "lp_id": "2283",
-        "form_key": "",
+        "lp_id": "2308",
+        "form_key": "59d3889553a22b6a3cf6240613a518e00a9c4071",
+        "form_submit": "Haz tu pedido",
+        "form_fields": [
+            {"name": "name", "label": "Nombre Apellido*", "placeholder": "Nombre Apellido", "type": "text", "autocomplete": "name", "required": True},
+            {"name": "street-address", "label": "Dirección*", "placeholder": "Dirección", "type": "text", "autocomplete": "street-address", "required": True},
+            {"name": "tel", "label": "Teléfono*", "placeholder": "Teléfono", "type": "tel", "autocomplete": "tel", "required": True},
+        ],
         "currency": "EUR",
         "price": 89.0,
         "price_now": "89 €",
@@ -71,8 +97,14 @@ OFFERS = [
         "slug": "air-curtain-2285",
         "product_type": "curtain",
         "offer_id": "2285",
-        "lp_id": "2285",
-        "form_key": "",
+        "lp_id": "2310",
+        "form_key": "f8e9e27e8af0efa942ab1616ad673ffb8afcb8cd",
+        "form_submit": "Jetzt bestellen",
+        "form_fields": [
+            {"name": "name", "label": "Vorname Nachname*", "placeholder": "Vorname Nachname", "type": "text", "autocomplete": "name", "required": True},
+            {"name": "street-address", "label": "Adresse*", "placeholder": "Adresse", "type": "text", "autocomplete": "street-address", "required": True},
+            {"name": "tel", "label": "Telefon*", "placeholder": "Telefon", "type": "tel", "autocomplete": "tel", "required": True},
+        ],
         "currency": "EUR",
         "price": 89.0,
         "price_now": "89 €",
@@ -86,8 +118,14 @@ OFFERS = [
         "slug": "wall-convector-2919",
         "product_type": "wall",
         "offer_id": "2919",
-        "lp_id": "2919",
-        "form_key": "",
+        "lp_id": "2952",
+        "form_key": "e3ba46f48043a07bef9da550e11a843ad1eab2b6",
+        "form_submit": "Rendeljen most",
+        "form_fields": [
+            {"name": "name", "label": "Keresztnév Vezetéknév*", "placeholder": "Keresztnév Vezetéknév", "type": "text", "autocomplete": "name", "required": True},
+            {"name": "street-address", "label": "Cím*", "placeholder": "Cím", "type": "text", "autocomplete": "street-address", "required": True},
+            {"name": "tel", "label": "Telefon*", "placeholder": "Telefon", "type": "tel", "autocomplete": "tel", "required": True},
+        ],
         "currency": "HUF",
         "price": 29999.0,
         "price_now": "29 999 Ft",

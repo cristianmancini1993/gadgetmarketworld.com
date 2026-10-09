@@ -57,30 +57,36 @@ def faq_html(faq: list[tuple[str, str]]) -> str:
     return "\n".join(out)
 
 
+def form_field_html(field: dict, suffix: str) -> str:
+    fid = field["name"] + suffix
+    req = ' required' if field.get("required") else ""
+    ac = field.get("autocomplete", "")
+    ac_attr = f' autocomplete="{esc(ac)}"' if ac else ""
+    return (
+        f'      <label for="{esc(fid)}">{field["label"]}</label>\n'
+        f'      <input id="{esc(fid)}" type="{esc(field["type"])}" name="{esc(field["name"])}"'
+        f'{ac_attr} placeholder="{esc(field["placeholder"])}"{req}>'
+    )
+
+
 def form_block(
     c: dict,
     offer: dict,
     ty_url: str,
     *,
     suffix: str = "",
-    form_id: str = "order-form",
 ) -> str:
-    sid = suffix
-    key = offer.get("form_key") or ""
+    fields_html = "\n".join(form_field_html(f, suffix) for f in offer["form_fields"])
+    submit = offer.get("form_submit") or c.get("submit", "Submit")
     return f"""    <form class="tm-order-form order-form" action="{FORM_ACTION}" method="post">
-      <label for="name{sid}">{esc(c['label_name'])}</label>
-      <input id="name{sid}" type="text" name="name" autocomplete="name" placeholder="{esc(c['ph_name'])}" required>
-      <label for="tel{sid}">{esc(c['label_tel'])}</label>
-      <input id="tel{sid}" type="tel" name="tel" autocomplete="tel" placeholder="{esc(c['ph_tel'])}" required>
-      <label for="street-address{sid}">{esc(c['label_addr'])}</label>
-      <input id="street-address{sid}" type="text" name="street-address" autocomplete="street-address" placeholder="{esc(c['ph_addr'])}" required>
+{fields_html}
       <input name="uid" type="hidden" value="{UID}">
       <input name="offer" type="hidden" value="{offer['offer_id']}">
       <input name="lp" type="hidden" value="{offer['lp_id']}">
       <input name="thankyoupage" type="hidden" value="{ty_url}">
       <input name="webhook" type="hidden" value="{WEBHOOK}">
-      <input name="_key" type="hidden" value="{key}">
-      <button name="submit" type="submit">{esc(c['submit'])}</button>
+      <input name="_key" type="hidden" value="{offer['form_key']}">
+      <button name="submit" type="submit">{esc(submit)}</button>
       <p class="form-trust">{c['form_trust']}</p>
     </form>"""
 
@@ -203,7 +209,7 @@ window.SITE_CONFIG = {{
     </div>
     <h3>{c['form_h3']}</h3>
     <p class="form-intro">{c['form_intro']}</p>
-{form_block(c, offer, ty_url, suffix="", form_id=offer_stack_id)}
+{form_block(c, offer, ty_url, suffix="")}
     <ul class="hx-trust-list">
       <li>{c['trust1']}</li>
       <li>{c['trust2']}</li>
@@ -323,7 +329,7 @@ window.SITE_CONFIG = {{
           </div>
           <h3>{c['form_h3']}</h3>
           <p class="form-intro">{c['form_intro']}</p>
-{form_block(c, offer, ty_url, suffix="-kit", form_id=kit_form_id)}
+{form_block(c, offer, ty_url, suffix="-kit")}
           <ul class="hx-trust-list">
             <li>{c['trust1']}</li>
             <li>{c['trust2']}</li>
