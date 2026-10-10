@@ -88,6 +88,19 @@ CONFIG = {
         "ph_tel": "+34 612 345 678",
         "submit": "Haz tu pedido",
     },
+    "cz/kreadora-pro-3497": {
+        "offer": "3497",
+        "lp": "3533",
+        "ty": "https://gadgetmarketworld.com/cz/kreadora-pro-3497/thank-you.html",
+        "_key": "8cf5ce5d255c9f4e92a94ab3f3ca323e4d4ddee4",
+        "label_name": "Jméno a příjmení*",
+        "label_addr": "Doručovací adresa*",
+        "label_tel": "Mobilní telefon*",
+        "ph_name": "Jan Novák",
+        "ph_addr": "Vinohradská 45, 120 00 Praha 2",
+        "ph_tel": "+420 601 234 567",
+        "submit": "Objednat nyní",
+    },
 }
 
 FORM_RE = re.compile(
