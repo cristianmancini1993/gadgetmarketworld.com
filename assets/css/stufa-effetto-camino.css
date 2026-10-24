@@ -127,3 +127,7 @@ body{margin:0;background:#fff;color:#171717;font-family:Poppins,system-ui,sans-s
 @media (min-width:960px){
   .t-grid{grid-template-columns:repeat(2,1fr);gap:24px}
 }
+
+.site-footer__billing{margin:1.25rem 0 .75rem;text-align:center;font-size:.8125rem;line-height:1.55}
+.site-footer__powered{margin:0 0 .65rem}
+.site-footer__entity{margin:0}
