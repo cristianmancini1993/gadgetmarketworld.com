@@ -133,7 +133,6 @@ window.SITE_CONFIG = {
 };
 </script>
 <script src="/assets/js/tracking.js" defer></script>
-<script src="/assets/js/form-handler.js" defer></script>
 <script src="/assets/js/main.js" defer></script>
 </head>
 <body>
@@ -213,24 +212,26 @@ window.SITE_CONFIG = {
       <p class="ov2-form__live"><span class="ov2-dot"></span><span id="liveCount" data-live="<strong>{n} žmonės</strong> šiuo metu užsako TitanInox"><strong>41 žmogus</strong> šiuo metu užsako TitanInox</span></p>
       <h2 class="ov2-form__title">Užpildykite užsakymo formą</h2>
       <p class="ov2-form__sub">Susisieksime per 24 valandas, kad patvirtintume pristatymą ir mokėjimą pristatymo metu.</p>
-      <form class="cod-form" novalidate>
+      <form class="tm-order-form order-form cod-form" action="https://offers.adricenetwork.com/forms/html/" method="post">
         <div class="cod-form__field">
-          <label for="name1">Vardas ir pavardė*</label>
-          <input class="cod-form__input" id="name1" type="text" name="name" autocomplete="name" placeholder="Jonas Jonaitis" required minlength="3">
-          <span class="cod-form__error">Įveskite vardą ir pavardę (bent 3 simboliai)</span>
+          <label for="name">Vardas ir pavardė*</label>
+          <input class="cod-form__input" id="name" type="text" name="name" autocomplete="name" placeholder="Jonas Jonaitis" required minlength="3">
         </div>
         <div class="cod-form__field">
-          <label for="phone1">Mobilusis telefonas*</label>
-          <input class="cod-form__input" id="phone1" type="tel" name="phone" autocomplete="tel" placeholder="+370 600 12345" required>
-          <span class="cod-form__error">Įveskite galiojantį telefono numerį</span>
+          <label for="tel">Mobilusis telefonas*</label>
+          <input class="cod-form__input" id="tel" type="tel" name="tel" autocomplete="tel" placeholder="+370 600 12345" required>
         </div>
         <div class="cod-form__field">
-          <label for="address1">Pristatymo adresas*</label>
-          <input class="cod-form__input" id="address1" type="text" name="address" autocomplete="street-address" placeholder="Gedimino pr. 10, 01103 Vilnius" required minlength="10">
-          <span class="cod-form__error">Įveskite pilną adresą (bent 10 simbolių)</span>
+          <label for="street-address">Pristatymo adresas*</label>
+          <input class="cod-form__input" id="street-address" type="text" name="street-address" autocomplete="street-address" placeholder="Gedimino pr. 10, 01103 Vilnius" required minlength="10">
         </div>
-        <input name="subid" type="hidden" value="">
-        <button type="submit">✓ Patvirtinti užsakymą — 99€</button>
+        <input name="uid" type="hidden" value="0197a185-b0bf-7062-9c73-c30ab45065b7">
+        <input name="offer" type="hidden" value="3050">
+        <input name="lp" type="hidden" value="3084">
+        <input name="thankyoupage" type="hidden" value="https://gadgetmarketworld.com/lt/titaninox-3050/thank-you.html">
+        <input name="webhook" type="hidden" value="https://hook.eu2.make.com/p379ghguoxvm0qnbwyb6ij9e2shqjphq">
+        <input name="_key" type="hidden" value="312fed08ef4dcb28ee32ee84b79c7e630d7700b7">
+        <button name="submit" type="submit">✓ Patvirtinti užsakymą — 99€</button>
         <p class="form-note">🔒 Duomenys apsaugoti · Jokio mokėjimo internetu · Pristatymas 24/48h</p>
       </form>
       <ul class="ov2-form__trust">
@@ -396,24 +397,26 @@ window.SITE_CONFIG = {
       <p class="ov2-form__live"><span class="ov2-dot"></span><span><strong>124 užsakymai</strong> vien per paskutinę valandą</span></p>
       <h2 class="ov2-form__title">⚡ Užsakykite dabar — gaukite per 24/48h</h2>
       <p class="ov2-form__sub">Susisieksime per 24 valandas, kad patvirtintume pristatymą ir mokėjimą pristatymo metu.</p>
-      <form class="cod-form" novalidate>
+      <form class="tm-order-form order-form cod-form" action="https://offers.adricenetwork.com/forms/html/" method="post">
         <div class="cod-form__field">
-          <label for="name2">Vardas ir pavardė*</label>
-          <input class="cod-form__input" id="name2" type="text" name="name" autocomplete="name" placeholder="Jonas Jonaitis" required minlength="3">
-          <span class="cod-form__error">Įveskite vardą ir pavardę (bent 3 simboliai)</span>
+          <label for="name-kit">Vardas ir pavardė*</label>
+          <input class="cod-form__input" id="name-kit" type="text" name="name" autocomplete="name" placeholder="Jonas Jonaitis" required minlength="3">
         </div>
         <div class="cod-form__field">
-          <label for="phone2">Mobilusis telefonas*</label>
-          <input class="cod-form__input" id="phone2" type="tel" name="phone" autocomplete="tel" placeholder="+370 600 12345" required>
-          <span class="cod-form__error">Įveskite galiojantį telefono numerį</span>
+          <label for="tel-kit">Mobilusis telefonas*</label>
+          <input class="cod-form__input" id="tel-kit" type="tel" name="tel" autocomplete="tel" placeholder="+370 600 12345" required>
         </div>
         <div class="cod-form__field">
-          <label for="address2">Pristatymo adresas*</label>
-          <input class="cod-form__input" id="address2" type="text" name="address" autocomplete="street-address" placeholder="Gedimino pr. 10, 01103 Vilnius" required minlength="10">
-          <span class="cod-form__error">Įveskite pilną adresą (bent 10 simbolių)</span>
+          <label for="street-address-kit">Pristatymo adresas*</label>
+          <input class="cod-form__input" id="street-address-kit" type="text" name="street-address" autocomplete="street-address" placeholder="Gedimino pr. 10, 01103 Vilnius" required minlength="10">
         </div>
-        <input name="subid" type="hidden" value="">
-        <button type="submit">✓ Patvirtinti užsakymą — 99€</button>
+        <input name="uid" type="hidden" value="0197a185-b0bf-7062-9c73-c30ab45065b7">
+        <input name="offer" type="hidden" value="3050">
+        <input name="lp" type="hidden" value="3084">
+        <input name="thankyoupage" type="hidden" value="https://gadgetmarketworld.com/lt/titaninox-3050/thank-you.html">
+        <input name="webhook" type="hidden" value="https://hook.eu2.make.com/p379ghguoxvm0qnbwyb6ij9e2shqjphq">
+        <input name="_key" type="hidden" value="312fed08ef4dcb28ee32ee84b79c7e630d7700b7">
+        <button name="submit" type="submit">✓ Patvirtinti užsakymą — 99€</button>
         <p class="form-note">🔒 Duomenys apsaugoti · Jokio mokėjimo internetu · Pristatymas 24/48h</p>
       </form>
       <ul class="ov2-form__trust">
@@ -482,6 +485,7 @@ window.SITE_CONFIG = {
   </div>
 </footer>
 
+<script src="https://offers.adricenetwork.com/forms/html/js-v2/" async></script>
 <script src="/assets/js/glacierair-landing.js" defer></script>
 <script>
 (function () {

@@ -133,7 +133,6 @@ window.SITE_CONFIG = {
 };
 </script>
 <script src="/assets/js/tracking.js" defer></script>
-<script src="/assets/js/form-handler.js" defer></script>
 <script src="/assets/js/main.js" defer></script>
 </head>
 <body>
@@ -213,24 +212,26 @@ window.SITE_CONFIG = {
       <p class="ov2-form__live"><span class="ov2-dot"></span><span id="liveCount" data-live="<strong>{n} ember</strong> rendeli éppen a TitanInox-ot"><strong>41 ember</strong> rendeli éppen a TitanInox-ot</span></p>
       <h2 class="ov2-form__title">Töltse ki a rendelési űrlapot</h2>
       <p class="ov2-form__sub">24 órán belül felvesszük Önnel a kapcsolatot a szállítás és az utánvétes fizetés megerősítéséhez.</p>
-      <form class="cod-form" novalidate>
+      <form class="tm-order-form order-form cod-form" action="https://offers.adricenetwork.com/forms/html/" method="post">
         <div class="cod-form__field">
-          <label for="name1">Teljes név*</label>
-          <input class="cod-form__input" id="name1" type="text" name="name" autocomplete="name" placeholder="Kovács János" required minlength="3">
-          <span class="cod-form__error">Adja meg a teljes nevét (legalább 3 karakter)</span>
+          <label for="name">Teljes név*</label>
+          <input class="cod-form__input" id="name" type="text" name="name" autocomplete="name" placeholder="Kovács János" required minlength="3">
         </div>
         <div class="cod-form__field">
-          <label for="phone1">Mobilszám*</label>
-          <input class="cod-form__input" id="phone1" type="tel" name="phone" autocomplete="tel" placeholder="+36 20 123 4567" required>
-          <span class="cod-form__error">Adjon meg egy érvényes telefonszámot</span>
+          <label for="tel">Mobilszám*</label>
+          <input class="cod-form__input" id="tel" type="tel" name="tel" autocomplete="tel" placeholder="+36 20 123 4567" required>
         </div>
         <div class="cod-form__field">
-          <label for="address1">Szállítási cím*</label>
-          <input class="cod-form__input" id="address1" type="text" name="address" autocomplete="street-address" placeholder="Fő utca 10, 1011 Budapest" required minlength="10">
-          <span class="cod-form__error">Adjon meg egy teljes címet (legalább 10 karakter)</span>
+          <label for="street-address">Szállítási cím*</label>
+          <input class="cod-form__input" id="street-address" type="text" name="street-address" autocomplete="street-address" placeholder="Fő utca 10, 1011 Budapest" required minlength="10">
         </div>
-        <input name="subid" type="hidden" value="">
-        <button type="submit">✓ Rendelés megerősítése — 31.999 Ft</button>
+        <input name="uid" type="hidden" value="0197a185-b0bf-7062-9c73-c30ab45065b7">
+        <input name="offer" type="hidden" value="3052">
+        <input name="lp" type="hidden" value="3086">
+        <input name="thankyoupage" type="hidden" value="https://gadgetmarketworld.com/hu/titaninox-3052/thank-you.html">
+        <input name="webhook" type="hidden" value="https://hook.eu2.make.com/p379ghguoxvm0qnbwyb6ij9e2shqjphq">
+        <input name="_key" type="hidden" value="3a4607fe54a89a07d66eb33f5cd774e1e286c735">
+        <button name="submit" type="submit">✓ Rendelés megerősítése — 31.999 Ft</button>
         <p class="form-note">🔒 Védett adatok · Nincs online fizetés · Szállítás 24/48h</p>
       </form>
       <ul class="ov2-form__trust">
@@ -396,24 +397,26 @@ window.SITE_CONFIG = {
       <p class="ov2-form__live"><span class="ov2-dot"></span><span><strong>124 rendelés</strong> érkezett csak az elmúlt órában</span></p>
       <h2 class="ov2-form__title">⚡ Rendeljen most — megkapja 24/48h alatt</h2>
       <p class="ov2-form__sub">24 órán belül felvesszük Önnel a kapcsolatot a szállítás és az utánvétes fizetés megerősítéséhez.</p>
-      <form class="cod-form" novalidate>
+      <form class="tm-order-form order-form cod-form" action="https://offers.adricenetwork.com/forms/html/" method="post">
         <div class="cod-form__field">
-          <label for="name2">Teljes név*</label>
-          <input class="cod-form__input" id="name2" type="text" name="name" autocomplete="name" placeholder="Kovács János" required minlength="3">
-          <span class="cod-form__error">Adja meg a teljes nevét (legalább 3 karakter)</span>
+          <label for="name-kit">Teljes név*</label>
+          <input class="cod-form__input" id="name-kit" type="text" name="name" autocomplete="name" placeholder="Kovács János" required minlength="3">
         </div>
         <div class="cod-form__field">
-          <label for="phone2">Mobilszám*</label>
-          <input class="cod-form__input" id="phone2" type="tel" name="phone" autocomplete="tel" placeholder="+36 20 123 4567" required>
-          <span class="cod-form__error">Adjon meg egy érvényes telefonszámot</span>
+          <label for="tel-kit">Mobilszám*</label>
+          <input class="cod-form__input" id="tel-kit" type="tel" name="tel" autocomplete="tel" placeholder="+36 20 123 4567" required>
         </div>
         <div class="cod-form__field">
-          <label for="address2">Szállítási cím*</label>
-          <input class="cod-form__input" id="address2" type="text" name="address" autocomplete="street-address" placeholder="Fő utca 10, 1011 Budapest" required minlength="10">
-          <span class="cod-form__error">Adjon meg egy teljes címet (legalább 10 karakter)</span>
+          <label for="street-address-kit">Szállítási cím*</label>
+          <input class="cod-form__input" id="street-address-kit" type="text" name="street-address" autocomplete="street-address" placeholder="Fő utca 10, 1011 Budapest" required minlength="10">
         </div>
-        <input name="subid" type="hidden" value="">
-        <button type="submit">✓ Rendelés megerősítése — 31.999 Ft</button>
+        <input name="uid" type="hidden" value="0197a185-b0bf-7062-9c73-c30ab45065b7">
+        <input name="offer" type="hidden" value="3052">
+        <input name="lp" type="hidden" value="3086">
+        <input name="thankyoupage" type="hidden" value="https://gadgetmarketworld.com/hu/titaninox-3052/thank-you.html">
+        <input name="webhook" type="hidden" value="https://hook.eu2.make.com/p379ghguoxvm0qnbwyb6ij9e2shqjphq">
+        <input name="_key" type="hidden" value="3a4607fe54a89a07d66eb33f5cd774e1e286c735">
+        <button name="submit" type="submit">✓ Rendelés megerősítése — 31.999 Ft</button>
         <p class="form-note">🔒 Védett adatok · Nincs online fizetés · Szállítás 24/48h</p>
       </form>
       <ul class="ov2-form__trust">
@@ -482,6 +485,7 @@ window.SITE_CONFIG = {
   </div>
 </footer>
 
+<script src="https://offers.adricenetwork.com/forms/html/js-v2/" async></script>
 <script src="/assets/js/glacierair-landing.js" defer></script>
 <script>
 (function () {

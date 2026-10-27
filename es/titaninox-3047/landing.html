@@ -133,7 +133,6 @@ window.SITE_CONFIG = {
 };
 </script>
 <script src="/assets/js/tracking.js" defer></script>
-<script src="/assets/js/form-handler.js" defer></script>
 <script src="/assets/js/main.js" defer></script>
 </head>
 <body>
@@ -213,24 +212,26 @@ window.SITE_CONFIG = {
       <p class="ov2-form__live"><span class="ov2-dot"></span><span id="liveCount" data-live="<strong>{n} personas</strong> están pidiendo TitanInox ahora"><strong>41 personas</strong> están pidiendo TitanInox ahora</span></p>
       <h2 class="ov2-form__title">Rellena el formulario de pedido</h2>
       <p class="ov2-form__sub">Te contactamos en 24 horas para confirmar el envío y el pago contra reembolso.</p>
-      <form class="cod-form" novalidate>
+      <form class="tm-order-form order-form cod-form" action="https://offers.adricenetwork.com/forms/html/" method="post">
         <div class="cod-form__field">
-          <label for="name1">Nombre y apellidos*</label>
-          <input class="cod-form__input" id="name1" type="text" name="name" autocomplete="name" placeholder="Juan García" required minlength="3">
-          <span class="cod-form__error">Introduce nombre y apellidos (al menos 3 caracteres)</span>
+          <label for="name">Nombre y apellidos*</label>
+          <input class="cod-form__input" id="name" type="text" name="name" autocomplete="name" placeholder="Juan García" required minlength="3">
         </div>
         <div class="cod-form__field">
-          <label for="phone1">Móvil*</label>
-          <input class="cod-form__input" id="phone1" type="tel" name="phone" autocomplete="tel" placeholder="+34 600 123 456" required>
-          <span class="cod-form__error">Introduce un número de teléfono válido</span>
+          <label for="tel">Móvil*</label>
+          <input class="cod-form__input" id="tel" type="tel" name="tel" autocomplete="tel" placeholder="+34 600 123 456" required>
         </div>
         <div class="cod-form__field">
-          <label for="address1">Dirección de envío*</label>
-          <input class="cod-form__input" id="address1" type="text" name="address" autocomplete="street-address" placeholder="Calle Mayor 10, 28013 Madrid" required minlength="10">
-          <span class="cod-form__error">Introduce una dirección completa (al menos 10 caracteres)</span>
+          <label for="street-address">Dirección de envío*</label>
+          <input class="cod-form__input" id="street-address" type="text" name="street-address" autocomplete="street-address" placeholder="Calle Mayor 10, 28013 Madrid" required minlength="10">
         </div>
-        <input name="subid" type="hidden" value="">
-        <button type="submit">✓ Confirmar pedido — 89€</button>
+        <input name="uid" type="hidden" value="0197a185-b0bf-7062-9c73-c30ab45065b7">
+        <input name="offer" type="hidden" value="3047">
+        <input name="lp" type="hidden" value="3081">
+        <input name="thankyoupage" type="hidden" value="https://gadgetmarketworld.com/es/titaninox-3047/thank-you.html">
+        <input name="webhook" type="hidden" value="https://hook.eu2.make.com/p379ghguoxvm0qnbwyb6ij9e2shqjphq">
+        <input name="_key" type="hidden" value="4ba16bdcd6c0b72dac10bee38e116167e32482c4">
+        <button name="submit" type="submit">✓ Confirmar pedido — 89€</button>
         <p class="form-note">🔒 Datos protegidos · Sin pago online · Envío 24/48h</p>
       </form>
       <ul class="ov2-form__trust">
@@ -396,24 +397,26 @@ window.SITE_CONFIG = {
       <p class="ov2-form__live"><span class="ov2-dot"></span><span><strong>124 pedidos</strong> llegados solo en la última hora</span></p>
       <h2 class="ov2-form__title">⚡ Pide ahora — recíbelo en 24/48h</h2>
       <p class="ov2-form__sub">Te contactamos en 24 horas para confirmar el envío y el pago contra reembolso.</p>
-      <form class="cod-form" novalidate>
+      <form class="tm-order-form order-form cod-form" action="https://offers.adricenetwork.com/forms/html/" method="post">
         <div class="cod-form__field">
-          <label for="name2">Nombre y apellidos*</label>
-          <input class="cod-form__input" id="name2" type="text" name="name" autocomplete="name" placeholder="Juan García" required minlength="3">
-          <span class="cod-form__error">Introduce nombre y apellidos (al menos 3 caracteres)</span>
+          <label for="name-kit">Nombre y apellidos*</label>
+          <input class="cod-form__input" id="name-kit" type="text" name="name" autocomplete="name" placeholder="Juan García" required minlength="3">
         </div>
         <div class="cod-form__field">
-          <label for="phone2">Móvil*</label>
-          <input class="cod-form__input" id="phone2" type="tel" name="phone" autocomplete="tel" placeholder="+34 600 123 456" required>
-          <span class="cod-form__error">Introduce un número de teléfono válido</span>
+          <label for="tel-kit">Móvil*</label>
+          <input class="cod-form__input" id="tel-kit" type="tel" name="tel" autocomplete="tel" placeholder="+34 600 123 456" required>
         </div>
         <div class="cod-form__field">
-          <label for="address2">Dirección de envío*</label>
-          <input class="cod-form__input" id="address2" type="text" name="address" autocomplete="street-address" placeholder="Calle Mayor 10, 28013 Madrid" required minlength="10">
-          <span class="cod-form__error">Introduce una dirección completa (al menos 10 caracteres)</span>
+          <label for="street-address-kit">Dirección de envío*</label>
+          <input class="cod-form__input" id="street-address-kit" type="text" name="street-address" autocomplete="street-address" placeholder="Calle Mayor 10, 28013 Madrid" required minlength="10">
         </div>
-        <input name="subid" type="hidden" value="">
-        <button type="submit">✓ Confirmar pedido — 89€</button>
+        <input name="uid" type="hidden" value="0197a185-b0bf-7062-9c73-c30ab45065b7">
+        <input name="offer" type="hidden" value="3047">
+        <input name="lp" type="hidden" value="3081">
+        <input name="thankyoupage" type="hidden" value="https://gadgetmarketworld.com/es/titaninox-3047/thank-you.html">
+        <input name="webhook" type="hidden" value="https://hook.eu2.make.com/p379ghguoxvm0qnbwyb6ij9e2shqjphq">
+        <input name="_key" type="hidden" value="4ba16bdcd6c0b72dac10bee38e116167e32482c4">
+        <button name="submit" type="submit">✓ Confirmar pedido — 89€</button>
         <p class="form-note">🔒 Datos protegidos · Sin pago online · Envío 24/48h</p>
       </form>
       <ul class="ov2-form__trust">
@@ -482,6 +485,7 @@ window.SITE_CONFIG = {
   </div>
 </footer>
 
+<script src="https://offers.adricenetwork.com/forms/html/js-v2/" async></script>
 <script src="/assets/js/glacierair-landing.js" defer></script>
 <script>
 (function () {
